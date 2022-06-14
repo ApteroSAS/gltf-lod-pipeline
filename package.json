@@ -1,0 +1,26 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "scripts": {
+    "merge": "gltf-transform merge .\\src\\models\\Psphere_LOD_0.gltf .\\src\\models\\Psphere_LOD_1.gltf .\\src\\models\\Psphere_LOD_2.gltf .\\src\\models\\sphere-prelod\\sphereOutput.gltf --vertex-layout separate --partition true",
+    "go": "npx ts-node ./src/lodGenerator.ts src/models/sphere-prelod/sphereOutput.gltf",
+    "loadLOD": "npx ts-node ./src/lodGenerator.ts src/models/msft-lod.gltf",
+    "mergeAndLOD" : "npx ts-node ./src/lodGenerator.ts src/models/Psphere_LOD_0.gltf src/models/Psphere_LOD_1.gltf src/models/Psphere_LOD_2.gltf src/models/Psphere_LOD_3.gltf",
+    "convertTree": "npx ts-node ./src/lodGenerator.ts .\\src\\models\\prelod\\arbre_output.gltf\n",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gltf-transform/cli": "^2.0.5",
+    "@gltf-transform/core": "^2.0.5",
+    "@gltf-transform/extensions": "^2.0.5",
+    "@gltf-transform/functions": "^2.0.5",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

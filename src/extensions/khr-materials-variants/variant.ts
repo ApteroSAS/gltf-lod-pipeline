@@ -1,0 +1,20 @@
+import { ExtensionProperty } from '@gltf-transform/core';
+import { KHR_MATERIALS_VARIANTS } from './constant';
+
+/**
+ * # Variant
+ *
+ * Defines a variant of a {@link Material}. See {@link MaterialsVariants}.
+ */
+export class Variant extends ExtensionProperty {
+	public static EXTENSION_NAME = KHR_MATERIALS_VARIANTS;
+	public declare extensionName: typeof KHR_MATERIALS_VARIANTS;
+	public declare propertyType: 'Variant';
+	public declare parentTypes: ['MappingList'];
+
+	protected init(): void {
+		this.extensionName = KHR_MATERIALS_VARIANTS;
+		this.propertyType = 'Variant';
+		this.parentTypes = ['MappingList'];
+	}
+}
